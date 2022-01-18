@@ -1,0 +1,71 @@
+body {
+  background-color: #232323;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: absolute;
+  list-style-type: none;
+  padding: 50px;
+  padding-top: 100px;
+  margin: 0;
+  width: 200px;
+  background-color: #fff;
+  transform-origin: left center;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s ease 0s;
+}
+
+.menu li {
+  margin: 18px 0;
+}
+.menu li:hover {
+  color: #ff6347;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  visibility: hidden;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  z-index: 9999;
+}
+.menu-toggle span {
+  width: 32px;
+  height: 4px;
+  background-color: #cdcdcd;
+  border-radius: 4px;
+  transform-origin: left center;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+}
+input[type="checkbox"]:checked ~ .menu-toggle span {
+  background-color: #000;
+}
+
+input[type="checkbox"]:checked ~ .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg);
+}
+input[type="checkbox"]:checked ~ .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+input[type="checkbox"]:checked ~ .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked ~ .menu {
+  transform: none;
+}
