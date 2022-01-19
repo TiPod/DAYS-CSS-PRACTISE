@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff0000, #ff00ff);
+}
+
+.container {
+  border-radius: 8px;
+  padding: 40px;
+  width: 350px;
+  background-color: #fff;
+
+  box-shadow: 0 0 5px 5px hsla(0, 0%, 100%, 0.25);
+}
+
+.input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrap input {
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid #c3c3c3;
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.input-wrap label {
+  position: absolute;
+  left: 4px;
+  bottom: 6px;
+  color: #c3c3c3;
+  font-size: 14px;
+  pointer-events: none;
+  transition: transform 0.25s ease-in-out, font-size 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+}
+.input-wrap input:focus ~ label,
+.input-wrap input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 16px;
+  color: #a3a3a3;
+}
