@@ -38,10 +38,11 @@ body {
   color: #f14c00;
 
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #000;
   background-clip: border-box;
+  outline: 0;
 
-  transition: width 1.5s ease;
+  transition: width 1.5s ease, margin 1.5s ease;
 }
 
 .search-wrap .search-btn {
@@ -65,6 +66,7 @@ body {
   width: 320px;
   margin: 0 16px;
   padding: 4px 8px;
+  outline: #f14c00 solid 1px;
 }
 
 .search-wrap:hover .search-btn,

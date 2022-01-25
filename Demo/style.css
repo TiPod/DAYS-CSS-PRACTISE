@@ -1,0 +1,72 @@
+body {
+  background-image: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbj-yuantu.fotomore.com%2Fcreative%2Fvcg%2Fnew%2FVCG211363439424.jpg%3FExpires%3D1643621485%26OSSAccessKeyId%3DLTAI2pb9T0vkLPEC%26Signature%3DV7ZL3VtfrWsfGDmJDiahAW3pOgo%253D%26x-oss-process%3Dimage%252Fauto-orient%252C0%252Fsaveexif%252C1%252Fresize%252Cm_lfit%252Ch_1200%252Cw_1200%252Climit_1%252Fsharpen%252C100%252Fquality%252CQ_80%252Fwatermark%252Cg_se%252Cx_0%252Cy_0%252Cimage_d2F0ZXIvdmNnLXdhdGVyLTIwMDAucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLG1fbGZpdCxoXzE3MSx3XzE3MSxsaW1pdF8x%252F&refer=http%3A%2F%2Fbj-yuantu.fotomore.com&app=2002&size=f10000,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1645673851&t=e8c4ec8d83c852ddb264e19bb2314342");
+}
+
+.box {
+  box-sizing: border-box;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.box-border {
+  border: 10px solid #f99;
+  padding: 10px;
+
+  font-size: 0;
+
+  background-color: aqua;
+}
+
+.box-content {
+  box-sizing: content-box;
+  border: 10px solid #f99;
+  padding: 10px;
+
+  font-size: 0;
+
+  background-color: aqua;
+}
+input:checked ~ .box-content {
+  animation: fade;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  /* transform: translateY(-100%); */
+}
+
+input:checked ~ .box-border {
+  animation: fade;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  /* transform: translateX(100%);
+
+  opacity: 0;
+  pointer-events: none; */
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.check {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+
+  box-shadow: 10px 0 black, 10px -10px black, 10px -20px black;
+}
+
+.backdrop {
+  backdrop-filter: blur(10px);
+}
+
+.filter{
+  filter: blur(160px);
+}
